@@ -53,3 +53,7 @@ a database connection GUI in your browser, which is much beatiful compared to th
   - Small to medium-sized projects
   - Projects requiring rapid iteration
   - Small team development scenarios
+
+## database 
+
+If we finally decide to use MySQL, Railway is a good choice, $5/month free trial is enough for presentation.
