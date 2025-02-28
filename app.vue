@@ -53,7 +53,15 @@ const newUser = ref({ name: '', email: '' })
 
 // 获取所有用户
 const fetchUsers = async () => {
-  users.value = await $fetch('/api/users')
+try {
+  // 使用useFetch获取用户数据
+  const { data } = await useFetch<User[]>('/api/users')
+  if (data.value) {
+    users.value = data.value
+  }
+} catch (error) {
+  console.error('获取用户数据失败:', error)
+}
 }
 
 // 创建用户
